@@ -7,6 +7,7 @@ let timer;
 let state = STARTING_STATE;
 let startingPlayer = 0;
 let activePlayer = 0;
+let isMuted = false;
 
 const presetTimes = [3 * 60 * 1000, 3 * 60 * 1000]; // in miliseconds
 const timers = [presetTimes[0], presetTimes[1]];
@@ -14,6 +15,7 @@ const timers = [presetTimes[0], presetTimes[1]];
 const timeBoxes = [document.getElementById("timeBox1"), document.getElementById("timeBox2")];
 const toggleButtons = [document.getElementById("playerToggleButton1"), document.getElementById("playerToggleButton2")];
 
+let clickSound = new Audio("Click.mp3");
 
 function format_time(player) {
     if (timers[player] < 20000) { // 20 seconds
@@ -78,7 +80,16 @@ function reset() {
 }
 
 function mute() {
-
+    if (isMuted) {
+        clickSound.volume = 0;
+        document.getElementById("muteButton").className = "button unmute";
+        document.getElementById("muteButton").textContent = "Unmute";
+    } else {
+        clickSound.volume = 1;
+        document.getElementById("muteButton").className = "button mute";
+        document.getElementById("muteButton").textContent = "Mute";
+    }
+    isMuted = !isMuted;
 }
 
 function pause() {
@@ -118,6 +129,7 @@ function tick() {
                 document.getElementById("kingPotato").className = "hiddenImage left";
             }
         }
+        clickSound.play();
     }
     format_time(activePlayer);
 }

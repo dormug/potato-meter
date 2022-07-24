@@ -123,6 +123,13 @@
     top: 904px;
 }
 
+.button.unmute {
+    width: 199px;
+    height: 61px;
+    left: 246px;
+    top: 904px;
+}
+
 .button.pause {
     width: 155px;
     height: 61px;
