@@ -77,18 +77,18 @@ function reset() {
     document.getElementById("kingPotato").className = "hiddenImage";
     document.getElementById("sadPotato").className = "hiddenImage";
     document.getElementById("knifePotato").className = "hiddenImage";
-    document.getElementById("pauseButton").className = "button pause";
+    document.getElementById("pauseButton").className = "button text pause";
     document.getElementById("pauseButton").innerHTML = "Pause";
 }
 
 function mute() {
     if (isMuted) {
         clickSound.volume = 0;
-        document.getElementById("muteButton").className = "button unmute";
+        document.getElementById("muteButton").className = "button text unmute";
         document.getElementById("muteButton").textContent = "Unmute";
     } else {
         clickSound.volume = 1;
-        document.getElementById("muteButton").className = "button mute";
+        document.getElementById("muteButton").className = "button text mute";
         document.getElementById("muteButton").textContent = "Mute";
     }
     isMuted = !isMuted;
@@ -98,12 +98,12 @@ function pause() {
     if (state == RUNNING_STATE) {
         window.clearInterval(timer);
         state = PAUSED_STATE;
-        document.getElementById("pauseButton").className = "button continue";
+        document.getElementById("pauseButton").className = "button text continue";
         document.getElementById("pauseButton").innerHTML = "Continue";
     } else if (state == PAUSED_STATE) {
         timer = window.setInterval(tick, 10);
         state = RUNNING_STATE;
-        document.getElementById("pauseButton").className = "button pause";
+        document.getElementById("pauseButton").className = "button text pause";
         document.getElementById("pauseButton").innerHTML = "Pause";
     }
 }

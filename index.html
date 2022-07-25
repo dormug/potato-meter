@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <button class="button playerToggle left" id="playerToggleButton1" type="button" onclick="toggle_players()">1</button>
+    <button class="button playerToggle numberFont left" id="playerToggleButton1" type="button" onclick="toggle_players()">1</button>
     <button class="button playerToggle right" id="playerToggleButton2" type="button" onclick="toggle_players()">2</button>
 
     <div class="timeBox" id="timeBox1" style="left:24px">3:00</div>
@@ -51,14 +51,14 @@
     <img id="knifePotato" class="hiddenImage" src="images/Knife.png"/>
     <img id="sadPotato" class="hiddenImage" src="images/Sad.png"/>
 
-    <div class="text" style="left:64px">Minutes</div>
-    <div class="text" style="left:450px">Seconds</div>
-    <div class="text" style="left:742px">Minutes</div>
-    <div class="text" style="left:1128px">Seconds</div>
+    <div class="row3 text" style="left:64px">Minutes</div>
+    <div class="row3 text" style="left:450px">Seconds</div>
+    <div class="row3 text" style="left:742px">Minutes</div>
+    <div class="row3 text" style="left:1128px">Seconds</div>
 
-    <button class="button mute" id="muteButton" type="button" onclick="mute()">Mute</button>
-    <button class="button pause" id="pauseButton" type="button" onclick="pause()">Pause</button>
-    <button class="button reset" id="resetButton" type="button" onclick="reset()">Reset</button>
+    <button class="button text mute" id="muteButton" type="button" onclick="mute()">Mute</button>
+    <button class="button text pause" id="pauseButton" type="button" onclick="pause()">Pause</button>
+    <button class="button text reset" id="resetButton" type="button" onclick="reset()">Reset</button>
     
     <script src="script.js"></script>
 </body>
