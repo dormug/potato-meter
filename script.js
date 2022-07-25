@@ -77,6 +77,8 @@ function reset() {
     document.getElementById("kingPotato").className = "hiddenImage";
     document.getElementById("sadPotato").className = "hiddenImage";
     document.getElementById("knifePotato").className = "hiddenImage";
+    document.getElementById("pauseButton").className = "button pause";
+    document.getElementById("pauseButton").innerHTML = "Pause";
 }
 
 function mute() {
